@@ -1,0 +1,88 @@
+# name=input()
+# age=int(input())
+# address=input()
+# print("My Name is "+name)
+# print("My age is ",age)
+# print("My address is ",address)
+# a=int(input())
+# b=int(input())
+# c=int(input())
+# prod=a*b*c
+# sum=a+b+c
+# res=prod/sum
+# print(type(res))
+
+# name=input()
+# dept=input()
+# score=int(input())
+# res=score/10
+# print("My Name is ",name)
+# print("My score is ",res,"/10")
+# print("res ",res)
+
+
+age=10
+c=str(age)
+print(type(c))
+a="10.888"
+b="10.111"
+c=float(a)+float(b)
+print(c)
+
+
+if(True):
+    print("True")
+else:
+    print("False")
+print("Hello")
+
+Megna=input()
+if(Megna=="Died"):
+    print("Surya meets Priya")
+else:
+    print("Surya weds Megna")
+
+
+
+input=input()
+if(input>=35):
+    print("Pass")
+else:
+    print("Fail")
+2
+ERROR!
+Traceback (most recent call last):
+  File "<main.py>", line 49, in <module>
+TypeError: '>=' not supported between instances of 'str' and 'int'
+
+
+num=int(input())
+if(num%3==0 and num%5==0):
+    print(num,"is divisible by both 3 and 5")
+else:
+    print(num,"is not divisible by both 3 and 5")
+
+
+if(num<35):
+    print("Poor Student")
+elif(num>70 and num<=100):
+    print("Good Student")
+elif(num>35 and num<70):
+    print("Average Student")
+else:
+    print("Enter score between 1 to 100")
+
+
+a=int(input("A:"))
+b=int(input("B:"))
+op=input("Add/sub/mul/div: ")
+if(op=="Add" or op=="add"):
+    print(a+b)
+elif(op=="sub" or op=="Sub"):
+    print(a-b)
+elif(op=='mul' or op=="Mul"):
+    print(a*b)
+elif(op=='div' or op=='Div'):
+    print(a/b)
+else:
+    print("Invalid operator")
