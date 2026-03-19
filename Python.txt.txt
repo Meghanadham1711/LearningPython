@@ -86,3 +86,203 @@ elif(op=='div' or op=='Div'):
     print(a/b)
 else:
     print("Invalid operator")
+
+
+#Looping Statements:
+#For Loop
+for i in "Apple":
+    print(i)
+for i in range(5):
+    print(i)
+for i in range(1,6):
+    print(i)
+for i in range(1,10,2):
+    print(i)
+#Multiplication Table for input number
+num=int(input("Enter a  num: "))
+for i in range(1,11):
+    print(num,"*",i,"=",(num*i))
+#Print Numbers between range
+a=int(input())
+b=int(input())
+for i in range(a,b):
+    print(i)
+#Even Numbers between 1 to 10
+for i in range(1,11):
+    if(i%2==0):
+        print(i)
+#Count number of Odd numbers  b/w 1 to 10
+count=0
+for i in range(1,11):
+    if(i%2!=0):
+        count+=1
+#count and print numbers which are divisible by both 3 and 5
+count=0
+for i in range(1,101):
+    if(i%3==0 and i%5==0):
+        print(i)
+        count+=1
+print("Count: ",count)
+#Sum of N natural numbers
+n=5
+sum=0
+print(n*(n+1)/2)
+for i in range(1,n+1):
+    sum+=i
+print(sum)
+
+sum=0
+for i in range(1,11):
+    num=int(input())
+    sum+=num
+avg=sum/10
+print("average: ",avg)
+
+n=int(input())
+for i in range(1,n+1):
+    print(i, "cube of ",i,"is ",(i*i*i))
+
+
+#Nested For loop
+#Example 1
+for i in range(1,6):
+    for j in range(1,3):
+        print(j,"Apple")
+
+#Example 2
+for i in range(1,5):
+    print("Week: ",i)
+    for j in range(1,8):
+        print("Day: ",j)
+
+#Pattern Programs
+
+for i in range(1,6):
+    for j in range(1,i+1):
+        print("* ",end="")
+    print()
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+#While loop:
+i=1
+while(i<=5):
+    print(i,end=" ")
+    i=i+1
+
+#Reverse n Natural numbers
+i=10
+while(i>0):
+    print(i,end=" ")
+    i=i-1
+#Factorial of given number
+n=5
+temp=n
+fact=1
+while(n>0):
+    fact*=n
+    n-=1
+print("factorial of",temp,"is",fact)
+
+#Python Collections
+#1)List []
+#2)Tuple ()
+#3) Set {}
+#4)Dictionary {key:value}
+
+#1) List []=>
+# we store multiple data of different data types
+# It is mutable we can add, remove,update,delete the item in the list
+#It supports indexing
+#List Methods: append(),insert(),pop(),extend(),len()
+
+list=[1,2,3,4,"Hello",True,566.999]
+print(list)
+#indexing
+print(list[0])
+print(list[-1])
+#Updating or modifying existing value
+list[0]="Welcome"
+print(list)
+
+#remove existing value
+#Using index postion
+list.pop(0)
+#if not specific index means last element in list will be remove
+list.pop()
+print(list)
+b=[10,20,30]
+list.extend(b)
+print(list)
+#insert at specific index position
+list.insert(0,"Welcome")
+print(list)
+
+#2)Tuple ()=>
+#Tuple is immutable in nature
+#We cann't add or remove item in set once it's created
+#We cann't modify the tuple item.
+#we can an access an item using indexes
+tuple=(1,2,3,4,5)
+print(tuple)
+print(tuple[0])
+tuple[0]=100
+print(tuple)
+(1, 2, 3, 4, 5)
+1
+ERROR!
+Traceback (most recent call last):
+  File "<main.py>", line 7, in <module>
+TypeError: 'tuple' object does not support item assignment
+
+#3)Set {}=>
+#set is a mutable datatype
+#set doesn't store duplicate
+#sets are unordered
+set={1,2,3,4}
+print(set)
+print(set[0])
+{1, 2, 3, 4}
+Traceback (most recent call last):
+  File "<main.py>", line 6, in <module>
+TypeError: 'set' object is not subscriptable
+#set Methods
+set={1,2,3,4}
+print(set)
+set.add(19)
+print(set)
+set.add(4)
+print(set)
+set.add("Hello")
+print(set)
+set.remove(19)
+print(set)
+set.pop()
+print(set)
+
+#4) Dictionary {key:value}=>
+# It doesn't allow duplicate, duplicate value will over write existing value.
+#Any type of data can be stored
+#key:value pair Ex:{"name":"Ram"}
+dict={"name":"Ram",
+"age":23,
+"location":"Tirupati"}
+print(dict)
+dict["age"]=32
+print(dict)
+dict["state"]="Ap"
+print(dict)
+#Methods
+print(dict.keys())
+print(dict.values())
+dict.update({"state":"Andhra Pradesh"})
+print(dict)
+dict.pop("age")
+print(dict)
+del dict["name"]
+print(dict)
+del dict
+print(dict)
+print(type (dict))
