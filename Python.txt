@@ -286,3 +286,47 @@ print(dict)
 del dict
 print(dict)
 print(type (dict))
+
+#Functions in Python:
+
+#A function is a block of code which is used to perform some specific task.
+#Functions are executed only when it is called.
+
+#syntax:
+def function_name():
+   #set of statements
+function_name()
+
+#Example:
+def painter():
+    print("Painting")
+painter()
+#parameterized function:
+#A function which has formal arguments in it's declaration
+#syntax:
+def function_name(parameter1,parameter2):
+    //Block of statements
+function_name(actual_value1,actual_value2)
+#Example
+def evenOrOdd(num):
+    if(num%2==0):
+        print("Even")
+    else:
+        print("Odd")
+
+evenOrOdd(int(input("Enter a number:")))
+#Example2
+def range1(a,b):
+    for i in range(a,b):
+        print(i)
+range1(10,20)
+#return keyword in python
+#Example:
+def evenOrOdd(num):
+    if(num%2==0):
+        return str(num)+" Even number"
+    else:
+        return str(num)+"Odd number"
+n=int(input("Enter a number:"))
+res=evenOrOdd(n)
+print(res)
