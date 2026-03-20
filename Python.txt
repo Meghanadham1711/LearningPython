@@ -330,3 +330,177 @@ def evenOrOdd(num):
 n=int(input("Enter a number:"))
 res=evenOrOdd(n)
 print(res)
+
+
+#Classes and Objects
+#Class:It is a collection of objects
+#Object:It is a instance of Class
+class goa:
+    name=""
+    drink=""
+    def party(self):
+        print("Enjoy the party")
+    def beach(self):
+        print("Enjoy the Beach")
+ramesh=goa()
+suresh=goa()
+ramesh.name="Ramesh"
+ramesh.drink="Yes"
+suresh.name="Suresh"
+suresh.drink="No"
+print(ramesh.name)
+ramesh.party()
+print("Drink: ",ramesh.drink)
+print("+++++++++++++")
+print(suresh.name)
+suresh.beach()
+print("Drink: ",suresh.drink)
+
+
+#Example2
+class Laptop:
+    price=0
+    processor=""
+    ram=""
+    def details(self):
+        print("Price: ",self.price)
+        print("Processor: ",self.processor)
+        print("Ram: ",self.ram)
+HP=Laptop()
+HP.price=35000
+HP.processor="intell core i7"
+HP.ram="16 GB"
+Dell=Laptop()
+Dell.price=55000
+Dell.processor="intell core i9"
+Dell.ram="8 GB"
+Lenovo=Laptop()
+Lenovo.price=50000
+Lenovo.processor="intell core i5"
+Lenovo.ram="16 GB"
+HP.details()
+Dell.details()
+Lenovo.details()
+
+#Constructor and self keyword
+#Constrcutors are mainly used to initaize value or assign values to the data members
+class Laptop:
+    def __int__(self):
+         price=0
+         processor=""
+         ram=""
+    def details(self):
+        print("Price: ",self.price)
+        print("Processor: ",self.processor)
+        print("Ram: ",self.ram)
+HP=Laptop()
+HP.price=35000
+HP.processor="i5"
+HP.ram="16 GB"
+Dell=Laptop()
+Dell.price=55000
+Dell.processor="i7"
+Dell.ram="8 GB"
+Lenovo=Laptop()
+Lenovo.price=50000
+Lenovo.processor="i9"
+Lenovo.ram="16 GB"
+HP.details()
+Dell.details()
+Lenovo.details()
+
+class Laptop:
+  #nothing means throws error
+
+class Laptop:
+    pass
+#if we mention pass keyword means it doesn't throws  error
+#Exampes for Classes and Objects
+class Student:
+    def __init__(self):
+        self.name=""
+        self.rollno=0
+    def display(self):
+        print("Name:",self.name)
+        print("Register number: ",self.rollno)
+ram=Student()
+ram.name="Ram"
+ram.rollno=586
+ram.display()
+
+#Parameterised Constructor in python
+#Example1
+class Fruit:
+    def __init__(self,col):
+        self.color=col
+  
+mango=Fruit("Yellow")
+print(mango.color)
+
+#Example2
+class Teacher:
+    def __init__(self,name,id):
+        self.name=name
+        self.id=id
+    def display(self):
+        print("Name: ",self.name)
+        print("Id: ",self.id)
+t1=Teacher("Gowthami",585)
+t2=Teacher("Prasad Babu",598)
+t1.display()
+t2.display()
+
+#Types of variables
+#1)Instance Variables
+#2)Class Variables
+
+#1)Instance Variables
+#Example
+class Phone():
+    def __init__(self,brand,price,chargertype): #Instance Variable
+        self.brand=brand
+        self.price=price
+        self.chargertype=chargertype
+    def display(self):
+        print("Brand: ",self.brand)
+        print("Price: ",self.price)
+        print("chargertype: ",self.chargertype)
+samsung=Phone("Samsung",10000,"C-type")
+samsung.display()
+
+#2)Class Variables
+#Example
+class Phone():
+    chargertype="B-type" #Class Variable
+    
+    def __init__(self,brand,price):
+        self.brand=brand
+        self.price=price
+        
+    def display(self):
+        print("Brand: ",self.brand)
+        print("Price: ",self.price)
+        print("chargertype: ",self.chargertype)
+samsung=Phone("Samgung",10000)
+realme=Phone("Realme",25000)
+samsung.display()
+realme.display()
+
+#Example :we can modify the class variable
+class Phone():
+    chargertype="B-type"
+    
+    def __init__(self,brand,price):
+        self.brand=brand
+        self.price=price
+        
+    def display(self):
+        print("Brand: ",self.brand)
+        print("Price: ",self.price)
+        print("chargertpe: ",self.chargertype)
+
+Phone.chargertype="C-type" #class variable modified
+samsung=Phone("Samgung",10000)
+realme=Phone("Realme",25000)
+samsung.display()
+realme.display()
