@@ -504,3 +504,256 @@ samsung=Phone("Samgung",10000)
 realme=Phone("Realme",25000)
 samsung.display()
 realme.display()
+
+#Types of Methods
+#1)Instance Method
+class laptop:
+    price=0
+    
+    def __init__(self):
+        print("laptop")
+    #Instance methods    
+    def setPrice(self,price):
+        self.price=price
+    def getPrice(self):
+        print("Price: ",self.price)
+hp=laptop()
+hp.getPrice()
+hp.setPrice(50000)
+hp.getPrice()
+
+#2)Class Methods
+class laptop:
+    price=0
+    
+    def __init__(self):
+        print("laptop")
+        
+    def setPrice(self,price):
+        self.price=price
+    def getPrice(self):
+        print("Price: ",self.price)
+
+    def display(cls): #class Method
+        print("laptop has 16RAM and i7 processor")
+hp=laptop()
+hp.getPrice()
+hp.setPrice(50000)
+hp.getPrice()
+hp.display()
+#(or)
+class laptop:
+    price=0
+    
+    def __init__(self):
+        print("laptop")
+        
+    def setPrice(self,price):
+        self.price=price
+    def getPrice(self):
+        print("Price: ",self.price)
+    @classmethod
+    def display(cls):
+        print("laptop has 16RAM and i7 processor")
+hp=laptop()
+hp.getPrice()
+hp.setPrice(50000)
+hp.getPrice()
+hp.display() # same example as above
+
+#3)Static Method
+#Example
+class laptop:
+    price=0
+    
+    def __init__(self):
+        print("laptop")
+        
+    def setPrice(self,price):
+        self.price=price
+    def getPrice(self):
+        print("Price: ",self.price)
+    @staticmethod
+    def display():
+        print("laptop has 16RAM and i7 processor")
+hp=laptop()
+hp.getPrice()
+hp.setPrice(50000)
+hp.getPrice()
+hp.display()
+
+#Object Oriented Principles
+#Inheritance
+#Polymorphism
+#Abstraction
+#Encapsulation
+
+#Inheritance
+Inheritance in Python is a core object-oriented programming (OOP) concept that allows a new class (child or derived class) to inherit attributes and methods from an existing class (parent or base class). This promotes code reusability and helps model real-world hierarchical relationships, such as a "Car is a Vehicle"
+#Types of Inheritance
+#1)Single Level Inheritance
+class dad():
+    def money(self):
+        print("dad's money")
+class son(dad):
+    def phone(self):
+        print("son's Phone")
+ram=son()
+ram.phone()
+ram.money()
+#2)Multiple Inheritance
+class dad():
+    def money(self):
+        print("dad's money")
+class mom():
+    def sweet(self):
+        print("Mom's sweet")
+class son(dad,mom):
+    def phone(self):
+        print("son's Phone")
+ram=son()
+ram.phone()
+ram.money()
+ram.sweet()
+
+#3) Multi-Level Inheritance
+class gradpa():
+    def land(self):
+        print("gradpa's land")
+class dad(gradpa):
+    def money(self):
+        print("dad's money")
+class son(dad):
+    def phone(self):
+        print("son's Phone")
+
+santhosh=son()
+santhosh.land()
+
+#4)Hierarchical Inheritance
+class dad():
+    def money(self):
+        print("Dad's money")
+class son1(dad):
+    pass
+class son2(dad):
+    pass
+class son3(dad):
+    pass
+ram=son1()
+ram.money()
+sam=son2()
+sam.money()
+gokul=son3()
+gokul.money()
+
+#5)Hybrid Inheritance
+class dad():
+    def money(self):
+        print("Dad's money")
+class important():
+    def land(self):
+        print("Important land")
+class son1(dad,important):
+    pass
+class son2(dad):
+    pass
+class son3(dad):
+    pass
+ram=son1()
+ram.money()
+ram.land()
+
+#super keyword in python
+#If child class has constructor then child class constructor will be executed even parent class has constructor
+class dad():
+    def __init__(self):
+        print("Dad")
+        
+    def money(self):
+        print("Dad's money")
+class son(dad):
+    def __init__(self):
+        print("Son")
+    def phone(self):
+        print("son's phone")
+seenu=son()
+
+#If Child class doesn't have constructor and parent class has a constructor then parent class constructor will get executed
+class dad():
+    def __init__(self):
+        print("Dad")
+        
+    def money(self):
+        print("Dad's money")
+class son(dad):
+    
+    def phone(self):
+        print("son's phone")
+seenu=son()
+
+#Constructors are used to change or access the parent class propertices.
+class dad():
+    name="Ram"
+    def __init__(self):
+        print("Dad")
+        
+    def money(self):
+        print("Dad's money")
+class son(dad):
+    def __init__(self):
+        super().__init__()
+        print("Name: ",super().name)
+        print("son")
+    
+    def phone(self):
+        print("son's phone")
+seenu=son()
+#Constructors miss used
+#Error
+class a():
+    name="Ram"
+    def __init__(self):
+        print("A")
+        
+    def display(self):
+        print("you are in class a")
+class b(a):
+    def __init__(self):
+       super().__init__()
+       print("B")
+    def display(self):
+        print("you are in class b")
+
+#obj=b()
+class c(a,b):
+    def __init__(self):
+        super().__init__()
+        print("C")
+    def display(self):
+        print("you are in class c")
+obj=c()
+
+#If multiple classes passed in a class means it will always selects left one class
+class a():
+    name="Ram"
+    def __init__(self):
+        print("A")
+        
+    def display(self):
+        print("you are in class a")
+class b(a):
+    def __init__(self):
+       super().__init__()
+       print("B")
+    def display(self):
+        print("you are in class b")
+
+#obj=b()
+class c(b,a):
+    def __init__(self):
+        super().__init__()
+        print("C")
+    def display(self):
+        print("you are in class c")
+obj=c()
