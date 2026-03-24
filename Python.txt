@@ -29,7 +29,7 @@ b="10.111"
 c=float(a)+float(b)
 print(c)
 
-
+#🎯🎯Decision Making statements
 if(True):
     print("True")
 else:
@@ -88,8 +88,8 @@ else:
     print("Invalid operator")
 
 
-#Looping Statements:
-#For Loop
+#🎯🎯Looping Statements:
+#✔For Loop
 for i in "Apple":
     print(i)
 for i in range(5):
@@ -143,7 +143,7 @@ for i in range(1,n+1):
     print(i, "cube of ",i,"is ",(i*i*i))
 
 
-#Nested For loop
+#✔Nested For loop
 #Example 1
 for i in range(1,6):
     for j in range(1,3):
@@ -166,7 +166,7 @@ for i in range(1,6):
 * * * 
 * * * * 
 * * * * * 
-#While loop:
+#✔While loop:
 i=1
 while(i<=5):
     print(i,end=" ")
@@ -186,13 +186,13 @@ while(n>0):
     n-=1
 print("factorial of",temp,"is",fact)
 
-#Python Collections
+#🎯🎯Python Collections
 #1)List []
 #2)Tuple ()
 #3) Set {}
 #4)Dictionary {key:value}
 
-#1) List []=>
+#1) 🏹 List []=>
 # we store multiple data of different data types
 # It is mutable we can add, remove,update,delete the item in the list
 #It supports indexing
@@ -220,7 +220,7 @@ print(list)
 list.insert(0,"Welcome")
 print(list)
 
-#2)Tuple ()=>
+#2)🏹 Tuple ()=>
 #Tuple is immutable in nature
 #We cann't add or remove item in set once it's created
 #We cann't modify the tuple item.
@@ -237,7 +237,7 @@ Traceback (most recent call last):
   File "<main.py>", line 7, in <module>
 TypeError: 'tuple' object does not support item assignment
 
-#3)Set {}=>
+#3)🏹 Set {}=>
 #set is a mutable datatype
 #set doesn't store duplicate
 #sets are unordered
@@ -262,7 +262,7 @@ print(set)
 set.pop()
 print(set)
 
-#4) Dictionary {key:value}=>
+#4)🏹 Dictionary {key:value}=>
 # It doesn't allow duplicate, duplicate value will over write existing value.
 #Any type of data can be stored
 #key:value pair Ex:{"name":"Ram"}
@@ -287,7 +287,7 @@ del dict
 print(dict)
 print(type (dict))
 
-#Functions in Python:
+#🎯🎯Functions in Python:
 
 #A function is a block of code which is used to perform some specific task.
 #Functions are executed only when it is called.
@@ -332,7 +332,7 @@ res=evenOrOdd(n)
 print(res)
 
 
-#Classes and Objects
+#🎯🎯 Classes and Objects
 #Class:It is a collection of objects
 #Object:It is a instance of Class
 class goa:
@@ -382,7 +382,7 @@ HP.details()
 Dell.details()
 Lenovo.details()
 
-#Constructor and self keyword
+#✔ Constructor and self keyword
 #Constrcutors are mainly used to initaize value or assign values to the data members
 class Laptop:
     def __int__(self):
@@ -428,7 +428,7 @@ ram.name="Ram"
 ram.rollno=586
 ram.display()
 
-#Parameterised Constructor in python
+#✔ Parameterised Constructor in python
 #Example1
 class Fruit:
     def __init__(self,col):
@@ -450,11 +450,11 @@ t2=Teacher("Prasad Babu",598)
 t1.display()
 t2.display()
 
-#Types of variables
+#🎯🎯 Types of variables
 #1)Instance Variables
 #2)Class Variables
 
-#1)Instance Variables
+#1)✔ Instance Variables
 #Example
 class Phone():
     def __init__(self,brand,price,chargertype): #Instance Variable
@@ -468,7 +468,7 @@ class Phone():
 samsung=Phone("Samsung",10000,"C-type")
 samsung.display()
 
-#2)Class Variables
+#2)✔ Class Variables
 #Example
 class Phone():
     chargertype="B-type" #Class Variable
@@ -505,8 +505,8 @@ realme=Phone("Realme",25000)
 samsung.display()
 realme.display()
 
-#Types of Methods
-#1)Instance Method
+#🎯🎯 Types of Methods
+#1)✔ Instance Method
 class laptop:
     price=0
     
@@ -522,7 +522,7 @@ hp.getPrice()
 hp.setPrice(50000)
 hp.getPrice()
 
-#2)Class Methods
+#2)✔ Class Methods
 class laptop:
     price=0
     
@@ -561,7 +561,7 @@ hp.setPrice(50000)
 hp.getPrice()
 hp.display() # same example as above
 
-#3)Static Method
+#3)✔ Static Method
 #Example
 class laptop:
     price=0
@@ -582,16 +582,15 @@ hp.setPrice(50000)
 hp.getPrice()
 hp.display()
 
-#Object Oriented Principles
-#Inheritance
-#Polymorphism
-#Abstraction
-#Encapsulation
+#🎯🎯 Object Oriented Principles
+#1)Inheritance
+#2)Polymorphism
+#3)Encapsulation
 
-#Inheritance
+#1)🏹 Inheritance
 Inheritance in Python is a core object-oriented programming (OOP) concept that allows a new class (child or derived class) to inherit attributes and methods from an existing class (parent or base class). This promotes code reusability and helps model real-world hierarchical relationships, such as a "Car is a Vehicle"
 #Types of Inheritance
-#1)Single Level Inheritance
+#1)✔ Single Level Inheritance
 class dad():
     def money(self):
         print("dad's money")
@@ -601,7 +600,7 @@ class son(dad):
 ram=son()
 ram.phone()
 ram.money()
-#2)Multiple Inheritance
+#2)✔ Multiple Inheritance
 class dad():
     def money(self):
         print("dad's money")
@@ -616,7 +615,7 @@ ram.phone()
 ram.money()
 ram.sweet()
 
-#3) Multi-Level Inheritance
+#3)✔ Multi-Level Inheritance
 class gradpa():
     def land(self):
         print("gradpa's land")
@@ -630,7 +629,7 @@ class son(dad):
 santhosh=son()
 santhosh.land()
 
-#4)Hierarchical Inheritance
+#4)✔ Hierarchical Inheritance
 class dad():
     def money(self):
         print("Dad's money")
@@ -647,7 +646,7 @@ sam.money()
 gokul=son3()
 gokul.money()
 
-#5)Hybrid Inheritance
+#5)✔ Hybrid Inheritance
 class dad():
     def money(self):
         print("Dad's money")
@@ -664,7 +663,7 @@ ram=son1()
 ram.money()
 ram.land()
 
-#super keyword in python
+#🎯🎯 super keyword in python
 #If child class has constructor then child class constructor will be executed even parent class has constructor
 class dad():
     def __init__(self):
@@ -757,3 +756,183 @@ class c(b,a):
     def display(self):
         print("you are in class c")
 obj=c()
+#2)🎯🎯 Polymorphism
+#The word polymorphism means having many forms.
+#In programminng,It means that the same function name(but different signature) being used for different types.
+#The key difference is the data types and number of arguments used in function.
+#Example:
+def add(a,b,c=0):
+    print(a+b+c)
+add(10,20)
+add(10,20,30)
+
+#3)🎯🎯 Encapsulation
+#Collection methods and varibles wrapped into single unit is called Encapsulation
+#Example:
+class Company():
+    def __init__(self):
+        self.__companyName="Google"
+    def getCompanyName(self):
+        print(self.__companyName)
+google=Company()
+google.getCompanyName()
+#Protected Variable
+#We can access protected variable within the same package or other package sub classes can access.
+class Company():
+    def __init__(self):
+        self._companyName="Google"
+class b(Company):
+    pass
+b1=b()
+print(b1._companyName) # Google
+
+
+#Errors
+#1)✔ Compile time Error
+print("Hello")
+print("Bye")
+printt("Welcome")
+
+Traceback (most recent call last):
+  File "C:/Users/Adminp3s/Documents/python_tasks/ExceptionHandling.py", line 3, in <module>
+    printt("Welcome")
+NameError: name 'printt' is not defined. Did you mean: 'print'?
+
+#2)✔ Logical Error:
+a=10
+b=20
+print(a+a)
+
+#3)✔ Run Time Error
+a=int(input())
+b=int(input())
+print(a+b)
+#i/p a=10,b=hi
+Traceback (most recent call last):
+  File "C:/Users/Adminp3s/Documents/python_tasks/ExceptionHandling.py", line 4, in <module>
+    b=int(input())
+ValueError: invalid literal for int() with base 10: 'hi'
+
+##🎯🎯 Exception Handling
+#Examples
+#1)
+try:
+    a=int(input())
+    b=int(input())
+except:
+    print("Invalid Input")
+#i/p: a=12, b=hi
+#o/p:Invalid Input
+#2)
+try:
+    a=int(input())
+    b=int(input())
+except Exception as e:
+    print(e)
+#i/p:
+12
+hi
+#o/p:
+invalid literal for int() with base 10: 'hi'
+
+#3)
+try:
+    a=input()
+    b=input()
+    print(a/b)
+except Exception as e:
+    print(e)
+#I/p:
+hi
+hi
+#O/p:
+unsupported operand type(s) for /: 'str' and 'str'
+#4)Exception Handling with finally block
+try:
+    a=int(input())
+    b=int(input())
+    c=input()
+    print(c/a)
+    print(d)
+except ValueError as e:
+    print("value Error",e)
+except TypeError as e:
+    print("TypeError",e)
+except Exception:
+    print("Something wrong")
+finally:
+    print("Exception Handling concept completed")
+
+# 🎯🎯 File handling
+#To Read a File (or) fetch data from file:
+#syntax:
+f=open(r,"Path of the file")
+print(f.read())
+#Example:
+f = open(r"Text.txt")
+print(f) # It shows the file name, mode whether it is read or write mode and encoding type.
+print(f.read())
+#(Or)
+f = open("Text.txt","r")
+print(f)
+content =f.read()
+print(content)
+print(type(content)) #<class 'str>
+
+# To write a file
+f = open("Text.txt","w")
+print(f)
+f.write("Banana \n")
+f.write("Grapes")
+f.close()
+#Note:we cann't perform I/O operations on Closed file.
+
+#To perform both read and write operation we use "r+"
+f = open("Text.txt","r+")
+print(f.read())
+print(f)
+f.write("Banana \n")
+f.write("Grapes")
+f.close()
+
+#append(): It is used to append data to existing data in a file.
+f = open("Text.txt","a")
+print(f)
+f.write("HI \n")
+f.write("Bye")
+f.close()
+f = open("Text.txt","r+")
+print(f.read())
+
+#If you want to read only one (first line)line in a file
+f = open("Text.txt","a")
+print(f)
+f.write("HI \n")
+f.write("Bye")
+f.close()
+f = open("Text.txt","r+")
+print(f.readline())
+
+#List Comprehension
+#It is concise way to create list in python by applying an expression to each item and
+#optionally filtering the items based on a condition.
+#Syntax:
+#[expression for value in iterable if condition]
+#example:
+#Ex:1)
+double=[x*2 for x in range(1,11)
+print(double)
+#In Traditional loop
+double=[]
+for x in range(1,11):
+   x=x*2
+   double.append(x)
+print(double)
+#Ex:2)
+list=[1,2,3,4,-8,-6,2,-7,7,-3]
+positive_num=[x for x in list if x>=0]
+negative_num=[x for x in list if x<0]
+print(positive_num)
+print(negative_num)
+
+
