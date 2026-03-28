@@ -913,7 +913,7 @@ f.close()
 f = open("Text.txt","r+")
 print(f.readline())
 
-#List Comprehension
+#✔✔ List Comprehension
 #It is concise way to create list in python by applying an expression to each item and
 #optionally filtering the items based on a condition.
 #Syntax:
